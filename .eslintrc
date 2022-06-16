@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@mafalda", "eslint:recommended", // "plugin:@mafalda/recommended",
+    "plugin:eslint-plugin/recommended", "plugin:node/recommended"
+  ]
+}
