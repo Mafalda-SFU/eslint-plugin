@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layout 1`] = `
+Object {
+  "configs": Object {
+    "recommended": Object {
+      "plugins": Array [
+        "@mafalda",
+      ],
+      "rules": Object {
+        "@mafalda/brace-style": Array [
+          "error",
+          "allman-multiline",
+        ],
+        "@mafalda/no-setInterval": "error",
+        "@mafalda/no-setTimeout": "warn",
+        "@mafalda/no-window-event": "error",
+        "brace-style": "off",
+      },
+    },
+    "typescript": Object {
+      "plugins": Array [
+        "@mafalda",
+      ],
+      "rules": Object {
+        "no-private-keyword": "error",
+        "no-protected-keyword": "warn",
+        "no-public-keyword": "error",
+      },
+    },
+  },
+  "rules": Object {
+    "brace-style": Object {
+      "create": [Function],
+      "meta": Object {
+        "docs": Object {
+          "description": "enforce consistent brace style for blocks",
+          "recommended": false,
+          "url": "https://eslint.org/docs/rules/brace-style",
+        },
+        "fixable": "whitespace",
+        "messages": Object {
+          "blockSameLine": "Statement inside of curly braces should be on next line.",
+          "nextLineClose": "Closing curly brace does not appear on the same line as the subsequent block.",
+          "nextLineOpen": "Opening curly brace does not appear on the same line as controlling statement.",
+          "sameLineClose": "Closing curly brace appears on the same line as the subsequent block.",
+          "sameLineOpen": "Opening curly brace appears on the same line as controlling statement.",
+          "singleLineClose": "Closing curly brace should be on the same line as opening curly brace or on the line after the previous block.",
+        },
+        "schema": Array [
+          Object {
+            "enum": Array [
+              "1tbs",
+              "stroustrup",
+              "allman",
+              "allman-multiline",
+            ],
+          },
+          Object {
+            "additionalProperties": false,
+            "properties": Object {
+              "allowSingleLine": Object {
+                "default": false,
+                "type": "boolean",
+              },
+            },
+            "type": "object",
+          },
+        ],
+        "type": "layout",
+      },
+    },
+    "no-private-keyword": [Function],
+    "no-protected-keyword": [Function],
+    "no-public-keyword": [Function],
+    "no-setInterval": Object {
+      "create": [Function],
+      "meta": Object {
+        "fixable": "code",
+        "messages": Object {},
+      },
+    },
+    "no-setTimeout": Object {
+      "create": [Function],
+      "meta": Object {
+        "fixable": "code",
+        "messages": Object {},
+      },
+    },
+    "no-window-event": Object {
+      "create": [Function],
+      "meta": Object {
+        "fixable": "code",
+        "messages": Object {},
+      },
+    },
+  },
+}
+`;
