@@ -11,7 +11,7 @@
 
 const {RuleTester} = require('eslint');
 
-const rule = require('../lib/rules/brace-style');
+const rule = require('../lib/rules/brace-style.js');
 
 
 /**
