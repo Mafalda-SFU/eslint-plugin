@@ -1,0 +1,5 @@
+.husky/
+coverage/
+test/
+*.tgz
+.eslintrc
