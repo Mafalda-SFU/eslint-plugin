@@ -40,7 +40,7 @@ function unIndent(strings, ...values)
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 6 } });
+const ruleTester = new RuleTester({parserOptions: {ecmaVersion: 6}});
 
 ruleTester.run('brace-style', rule, {
   invalid: [
@@ -54,9 +54,9 @@ ruleTester.run('brace-style', rule, {
         finally {
         }`,
       errors: [
-        { line: 1, messageId: 'sameLineOpen', type: 'Punctuator' },
-        { line: 4, messageId: 'sameLineOpen', type: 'Punctuator' },
-        { line: 6, messageId: 'sameLineOpen', type: 'Punctuator' }
+        {line: 1, messageId: 'sameLineOpen', type: 'Punctuator'},
+        {line: 4, messageId: 'sameLineOpen', type: 'Punctuator'},
+        {line: 6, messageId: 'sameLineOpen', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: 'try \n{\n  bar();\n}\ncatch (e) \n{\n}\nfinally \n{\n}'
@@ -67,9 +67,9 @@ ruleTester.run('brace-style', rule, {
           bar(); }
       `,
       errors: [
-        { line: 1, messageId: 'sameLineOpen', type: 'Punctuator' },
-        { line: 1, messageId: 'blockSameLine', type: 'Punctuator' },
-        { line: 2, messageId: 'singleLineClose', type: 'Punctuator' }
+        {line: 1, messageId: 'sameLineOpen', type: 'Punctuator'},
+        {line: 1, messageId: 'blockSameLine', type: 'Punctuator'},
+        {line: 2, messageId: 'singleLineClose', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: 'switch(x) \n{\n case 1:\n  bar(); \n}'
@@ -77,9 +77,9 @@ ruleTester.run('brace-style', rule, {
     {
       code: 'if (a) { \nb();\n } else { \nc();\n }',
       errors: [
-        { messageId: 'sameLineOpen', type: 'Punctuator' },
-        { messageId: 'sameLineClose', type: 'Punctuator' },
-        { messageId: 'sameLineOpen', type: 'Punctuator' }
+        {messageId: 'sameLineOpen', type: 'Punctuator'},
+        {messageId: 'sameLineClose', type: 'Punctuator'},
+        {messageId: 'sameLineOpen', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: 'if (a) \n{ \nb();\n }\n else \n{ \nc();\n }'
@@ -95,10 +95,10 @@ ruleTester.run('brace-style', rule, {
           qux();
         }`,
       errors: [
-        { messageId: 'sameLineOpen', type: 'Punctuator' },
-        { messageId: 'sameLineClose', type: 'Punctuator' },
-        { messageId: 'sameLineOpen', type: 'Punctuator' },
-        { messageId: 'sameLineOpen', type: 'Punctuator' }
+        {messageId: 'sameLineOpen', type: 'Punctuator'},
+        {messageId: 'sameLineClose', type: 'Punctuator'},
+        {messageId: 'sameLineOpen', type: 'Punctuator'},
+        {messageId: 'sameLineOpen', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: 'if (foo) \n{\n  baz();\n}\n else if (bar) \n{\n  baz();\n}\nelse'
@@ -119,11 +119,11 @@ ruleTester.run('brace-style', rule, {
         }
       `,
       errors: [
-        { messageId: 'blockSameLine', type: 'Punctuator' },
-        { messageId: 'sameLineOpen', type: 'Punctuator' },
-        { messageId: 'sameLineClose', type: 'Punctuator' },
-        { messageId: 'sameLineOpen', type: 'Punctuator' },
-        { messageId: 'sameLineOpen', type: 'Punctuator' }
+        {messageId: 'blockSameLine', type: 'Punctuator'},
+        {messageId: 'sameLineOpen', type: 'Punctuator'},
+        {messageId: 'sameLineClose', type: 'Punctuator'},
+        {messageId: 'sameLineOpen', type: 'Punctuator'},
+        {messageId: 'sameLineOpen', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: 'if (foo)\n{\n poop();\n}\nelse if (bar) \n{\n  baz();\n}\n else '
@@ -132,7 +132,7 @@ ruleTester.run('brace-style', rule, {
     {
       code: 'if (foo)\n{\n  bar(); }',
       errors: [
-        { messageId: 'singleLineClose', type: 'Punctuator' }
+        {messageId: 'singleLineClose', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: 'if (foo)\n{\n  bar(); \n}'
@@ -140,7 +140,7 @@ ruleTester.run('brace-style', rule, {
     {
       code: 'try\n{\n  somethingRisky();\n} catch (e)\n{\n  handleError()\n}',
       errors: [
-        { messageId: 'sameLineClose', type: 'Punctuator' }
+        {messageId: 'sameLineClose', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: 'try\n{\n  somethingRisky();\n}\n catch (e)\n{\n  handleError()\n'
@@ -152,42 +152,42 @@ ruleTester.run('brace-style', rule, {
       code: 'if (foo)\n{ poop();\n} \nelse if (bar) {\nbaz();\n} else if '
       + '(thing) {\nboom();\n}\nelse {\nqux();\n}',
       errors: [
-        { messageId: 'blockSameLine', type: 'Punctuator' },
-        { messageId: 'sameLineOpen', type: 'Punctuator' },
-        { messageId: 'sameLineClose', type: 'Punctuator' },
-        { messageId: 'sameLineOpen', type: 'Punctuator' },
-        { messageId: 'sameLineOpen', type: 'Punctuator' }
+        {messageId: 'blockSameLine', type: 'Punctuator'},
+        {messageId: 'sameLineOpen', type: 'Punctuator'},
+        {messageId: 'sameLineClose', type: 'Punctuator'},
+        {messageId: 'sameLineOpen', type: 'Punctuator'},
+        {messageId: 'sameLineOpen', type: 'Punctuator'}
       ],
-      options: ['allman-multiline', { allowSingleLine: true }],
+      options: ['allman-multiline', {allowSingleLine: true}],
       output: 'if (foo)\n{\n poop();\n} \nelse if (bar) \n{\nbaz();\n}\n else '
       + 'if (thing) \n{\nboom();\n}\nelse \n{\nqux();\n}'
     },
 
     {
       code: 'if (foo)\n{\n bar\n.baz }',
-      errors: [{ messageId: 'singleLineClose', type: 'Punctuator' }],
+      errors: [{messageId: 'singleLineClose', type: 'Punctuator'}],
       options: ['allman-multiline'],
       output: 'if (foo)\n{\n bar\n.baz \n}'
     },
     {
       code: 'if (foo) { bar\n.baz }',
       errors: [
-        { messageId: 'sameLineOpen', type: 'Punctuator' },
-        { messageId: 'blockSameLine', type: 'Punctuator' },
-        { messageId: 'singleLineClose', type: 'Punctuator' }
+        {messageId: 'sameLineOpen', type: 'Punctuator'},
+        {messageId: 'blockSameLine', type: 'Punctuator'},
+        {messageId: 'singleLineClose', type: 'Punctuator'}
       ],
-      options: ['allman-multiline', { allowSingleLine: true }],
+      options: ['allman-multiline', {allowSingleLine: true}],
       output: 'if (foo) \n{\n bar\n.baz \n}'
     },
     {
       code: 'class Foo{\n}',
-      errors: [{ messageId: 'sameLineOpen', type: 'Punctuator' }],
+      errors: [{messageId: 'sameLineOpen', type: 'Punctuator'}],
       options: ['allman-multiline'],
       output: 'class Foo\n{\n}'
     },
     {
       code: '(class {\n})',
-      errors: [{ messageId: 'sameLineOpen', type: 'Punctuator' }],
+      errors: [{messageId: 'sameLineOpen', type: 'Punctuator'}],
       options: ['allman-multiline'],
       output: '(class \n{\n})'
     },
@@ -210,7 +210,7 @@ ruleTester.run('brace-style', rule, {
         }
       `,
       errors: [
-        { messageId: 'sameLineOpen', type: 'Punctuator' }
+        {messageId: 'sameLineOpen', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: unIndent`
@@ -222,7 +222,7 @@ ruleTester.run('brace-style', rule, {
           }
         }
       `,
-      parserOptions: { ecmaVersion: 2022 }
+      parserOptions: {ecmaVersion: 2022}
     },
     {
       code: unIndent`
@@ -234,7 +234,7 @@ ruleTester.run('brace-style', rule, {
         }
       `,
       errors: [
-        { messageId: 'blockSameLine', type: 'Punctuator' }
+        {messageId: 'blockSameLine', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: unIndent`
@@ -246,7 +246,7 @@ ruleTester.run('brace-style', rule, {
           }
         }
       `,
-      parserOptions: { ecmaVersion: 2022 }
+      parserOptions: {ecmaVersion: 2022}
     },
     {
       code: unIndent`
@@ -258,7 +258,7 @@ ruleTester.run('brace-style', rule, {
         }
       `,
       errors: [
-        { messageId: 'singleLineClose', type: 'Punctuator' }
+        {messageId: 'singleLineClose', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: unIndent`
@@ -270,7 +270,7 @@ ruleTester.run('brace-style', rule, {
         }
         }
       `,
-      parserOptions: { ecmaVersion: 2022 }
+      parserOptions: {ecmaVersion: 2022}
     },
     {
       code: unIndent`
@@ -280,9 +280,9 @@ ruleTester.run('brace-style', rule, {
         }
       `,
       errors: [
-        { messageId: 'sameLineOpen', type: 'Punctuator' },
-        { messageId: 'blockSameLine', type: 'Punctuator' },
-        { messageId: 'singleLineClose', type: 'Punctuator' }
+        {messageId: 'sameLineOpen', type: 'Punctuator'},
+        {messageId: 'blockSameLine', type: 'Punctuator'},
+        {messageId: 'singleLineClose', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: unIndent`
@@ -294,7 +294,7 @@ ruleTester.run('brace-style', rule, {
         }
         }
       `,
-      parserOptions: { ecmaVersion: 2022 }
+      parserOptions: {ecmaVersion: 2022}
     },
     {
       code: unIndent`
@@ -304,7 +304,7 @@ ruleTester.run('brace-style', rule, {
         }
       `,
       errors: [
-        { messageId: 'sameLineOpen', type: 'Punctuator' }
+        {messageId: 'sameLineOpen', type: 'Punctuator'}
       ],
       options: ['allman-multiline'],
       output: unIndent`
@@ -314,12 +314,12 @@ ruleTester.run('brace-style', rule, {
         {}
         }
       `,
-      parserOptions: { ecmaVersion: 2022 }
+      parserOptions: {ecmaVersion: 2022}
     }
   ],
 
   valid: [
-    { code: 'if (foo)\n{\n}\nelse\n{\n}', options: ['allman-multiline'] },
+    {code: 'if (foo)\n{\n}\nelse\n{\n}', options: ['allman-multiline']},
     {
       code: 'try\n{\n bar();\n}\ncatch (e)\n{\n baz(); \n}',
       options: ['allman-multiline']
@@ -328,16 +328,16 @@ ruleTester.run('brace-style', rule, {
     // allowSingleLine: true
     {
       code: 'if (foo) {}\nelse {}',
-      options: ['allman-multiline', { allowSingleLine: true }]
+      options: ['allman-multiline', {allowSingleLine: true}]
     },
     {
       code: 'try {  bar(); }\ncatch (e) { baz();  }',
-      options: ['allman-multiline', { allowSingleLine: true }]
+      options: ['allman-multiline', {allowSingleLine: true}]
     },
     {
       code: 'var foo = () => { return; }',
-      options: ['allman-multiline', { allowSingleLine: true }],
-      parserOptions: { ecmaVersion: 6 }
+      options: ['allman-multiline', {allowSingleLine: true}],
+      parserOptions: {ecmaVersion: 6}
     },
     {
       code: 'switch(x) \n{ \n case 1: \nbar(); \n }\n ',
@@ -345,7 +345,7 @@ ruleTester.run('brace-style', rule, {
     },
     {
       code: 'switch(x) {}',
-      options: ['allman-multiline', { allowSingleLine: true }]
+      options: ['allman-multiline', {allowSingleLine: true}]
     },
     {
       code: 'class Foo\n{\n}',
@@ -361,11 +361,11 @@ ruleTester.run('brace-style', rule, {
     },
     {
       code: 'class Foo {}',
-      options: ['allman-multiline', { allowSingleLine: true }]
+      options: ['allman-multiline', {allowSingleLine: true}]
     },
     {
       code: '(class {})',
-      options: ['allman-multiline', { allowSingleLine: true }]
+      options: ['allman-multiline', {allowSingleLine: true}]
     },
 
     // class static blocks
@@ -380,7 +380,7 @@ ruleTester.run('brace-style', rule, {
         }
       `,
       options: ['allman-multiline'],
-      parserOptions: { ecmaVersion: 2022 }
+      parserOptions: {ecmaVersion: 2022}
     },
     {
       code: unIndent`
@@ -391,7 +391,7 @@ ruleTester.run('brace-style', rule, {
         }
       `,
       options: ['allman-multiline'],
-      parserOptions: { ecmaVersion: 2022 }
+      parserOptions: {ecmaVersion: 2022}
     },
     {
       code: unIndent`
@@ -405,8 +405,8 @@ ruleTester.run('brace-style', rule, {
           { foo; }
         }
       `,
-      options: ['allman-multiline', { allowSingleLine: true }],
-      parserOptions: { ecmaVersion: 2022 }
+      options: ['allman-multiline', {allowSingleLine: true}],
+      parserOptions: {ecmaVersion: 2022}
     },
 
     // allman-multiline
