@@ -23,9 +23,9 @@ Object {
         "@mafalda",
       ],
       "rules": Object {
-        "no-private-keyword": "error",
-        "no-protected-keyword": "warn",
-        "no-public-keyword": "error",
+        "@mafalda/no-private-keyword": "error",
+        "@mafalda/no-protected-keyword": "warn",
+        "@mafalda/no-public-keyword": "error",
       },
     },
   },
