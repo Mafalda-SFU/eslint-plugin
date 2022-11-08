@@ -34,7 +34,7 @@
     "object-unfreeze": "^1.1.0"
   },
   "devDependencies": {
-    "@mafalda/eslint-config": "github:Mafalda-SFU/eslint-config",
+    "@mafalda/eslint-config": "^0.0.0",
     "c8": "^7.12.0",
     "chai": "^4.3.7",
     "husky": "^8.0.1",
