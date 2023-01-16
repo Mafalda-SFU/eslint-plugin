@@ -18,7 +18,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - run: npm ci
-      - run: npm test -- --coverageReporters=json-summary
+      - run: npm run test:json
       - run: npm run docs
 
       - uses: cpina/github-action-push-to-another-repository@v1.5.1

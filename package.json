@@ -9,7 +9,8 @@
     "predocs": "mkdir -p docs/",
     "prepare": "husky install",
     "pretest": "npm run lint",
-    "test": "c8 --all --src lib mocha"
+    "test": "c8 --all --src lib mocha",
+    "test:json": "c8 --all --reporter=json-summary --src lib mocha"
   },
   "repository": {
     "type": "git",
