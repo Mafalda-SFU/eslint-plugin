@@ -6,9 +6,9 @@
   "scripts": {
     "docs": "cp README.md docs/ && jsdoc2md lib/**/*.js > docs/API.md",
     "lint": "eslint .",
-    "pretest": "npm run lint",
     "predocs": "mkdir -p docs/",
     "prepare": "husky install",
+    "pretest": "npm run lint",
     "test": "c8 --all --src lib mocha"
   },
   "repository": {
