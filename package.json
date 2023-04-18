@@ -30,15 +30,15 @@
   },
   "homepage": "https://github.com/Mafalda-SFU/eslint-plugin#readme",
   "dependencies": {
-    "eslint": "^8.32.0",
-    "eslint-plugin-eslint-plugin": "^5.0.7",
+    "eslint": "^8.38.0",
+    "eslint-plugin-eslint-plugin": "^5.0.8",
     "eslint-plugin-node": "^11.1.0",
     "eslint-rule-composer": "^0.3.0",
     "object-unfreeze": "^1.1.0"
   },
   "devDependencies": {
-    "@mafalda/eslint-config": "^0.0.1",
-    "c8": "^7.12.0",
+    "@mafalda/eslint-config": "^0.0.5",
+    "c8": "^7.13.0",
     "chai": "^4.3.7",
     "husky": "^8.0.3",
     "jsdoc-to-markdown": "^8.0.0",
