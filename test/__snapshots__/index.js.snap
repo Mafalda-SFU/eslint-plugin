@@ -5,27 +5,27 @@ Object {
   "configs": Object {
     "recommended": Object {
       "plugins": Array [
-        "@mafalda",
+        "@mafalda-sfu",
       ],
       "rules": Object {
-        "@mafalda/brace-style": Array [
+        "@mafalda-sfu/brace-style": Array [
           "error",
           "allman-multiline",
         ],
-        "@mafalda/no-setInterval": "error",
-        "@mafalda/no-setTimeout": "warn",
-        "@mafalda/no-window-event": "error",
+        "@mafalda-sfu/no-setInterval": "error",
+        "@mafalda-sfu/no-setTimeout": "warn",
+        "@mafalda-sfu/no-window-event": "error",
         "brace-style": "off",
       },
     },
     "typescript": Object {
       "plugins": Array [
-        "@mafalda",
+        "@mafalda-sfu",
       ],
       "rules": Object {
-        "@mafalda/no-private-keyword": "error",
-        "@mafalda/no-protected-keyword": "warn",
-        "@mafalda/no-public-keyword": "error",
+        "@mafalda-sfu/no-private-keyword": "error",
+        "@mafalda-sfu/no-protected-keyword": "warn",
+        "@mafalda-sfu/no-public-keyword": "error",
       },
     },
   },

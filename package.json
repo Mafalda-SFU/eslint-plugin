@@ -1,5 +1,5 @@
 {
-  "name": "@mafalda/eslint-plugin",
+  "name": "@mafalda-sfu/eslint-plugin",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -37,7 +37,7 @@
     "object-unfreeze": "^1.1.0"
   },
   "devDependencies": {
-    "@mafalda/eslint-config": "^0.0.5",
+    "@mafalda-sfu/eslint-config": "^0.0.6",
     "c8": "^7.13.0",
     "chai": "^4.3.7",
     "husky": "^8.0.3",
