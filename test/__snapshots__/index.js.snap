@@ -36,7 +36,7 @@ Object {
         "docs": Object {
           "description": "Enforce consistent brace style for blocks",
           "recommended": false,
-          "url": "https://eslint.org/docs/rules/brace-style",
+          "url": "https://eslint.org/docs/latest/rules/brace-style",
         },
         "fixable": "whitespace",
         "messages": Object {
