@@ -3,6 +3,18 @@
 exports[`layout 1`] = `
 Object {
   "configs": Object {
+    "layout": Object {
+      "plugins": Array [
+        "@mafalda-sfu",
+      ],
+      "rules": Object {
+        "@mafalda-sfu/brace-style": Array [
+          "error",
+          "allman-multiline",
+        ],
+        "brace-style": "off",
+      },
+    },
     "recommended": Object {
       "plugins": Array [
         "@mafalda-sfu",
@@ -16,6 +28,26 @@ Object {
         "@mafalda-sfu/no-setTimeout": "warn",
         "@mafalda-sfu/no-window-event": "error",
         "brace-style": "off",
+      },
+    },
+    "suggestions": Object {
+      "plugins": Array [
+        "@mafalda-sfu",
+      ],
+      "rules": Object {
+        "@mafalda-sfu/no-setInterval": "error",
+        "@mafalda-sfu/no-setTimeout": "warn",
+        "@mafalda-sfu/no-window-event": "error",
+      },
+    },
+    "suggestions-typescript": Object {
+      "plugins": Array [
+        "@mafalda-sfu",
+      ],
+      "rules": Object {
+        "@mafalda-sfu/no-private-keyword": "error",
+        "@mafalda-sfu/no-protected-keyword": "warn",
+        "@mafalda-sfu/no-public-keyword": "error",
       },
     },
     "typescript": Object {
