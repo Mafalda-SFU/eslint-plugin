@@ -17,20 +17,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - run: npm ci
-      - run: npm run test:json
-      - run: npm run docs
+      # Install dependencies
+      - run: npm ci --verbose
 
-      - uses: cpina/github-action-push-to-another-repository@v1.5.1
-        env:
-          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
-        with:
-          destination-github-username: Mafalda-SFU
-          destination-repository-name: Mafalda-SFU.github.io
-          source-directory: docs
-          target-directory: docs/${{ github.event.repository.name }}
-          user-email: bot@mafalda.io
-          user-name: Mafalda bot
+      # Run tests and publish code coverage badge
+      - run: npm run test:json
 
       - name: "Combine"
         run: |
@@ -49,3 +40,20 @@ jobs:
           maxColorRange: 90
           namedLogo: Jest
           valColorRange: ${{ env.total }}
+
+      # Publish docs
+      - run: npm run docs
+
+      - uses: cpina/github-action-push-to-another-repository@v1.5.1
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        with:
+          destination-github-username: Mafalda-SFU
+          destination-repository-name: Mafalda-SFU.github.io
+          source-directory: docs
+          target-directory: docs/${{ github.event.repository.name }}
+          user-email: bot@mafalda.io
+          user-name: Mafalda bot
+
+      # TODO: add steps to update the version using semantic-release, and
+      #       publish to Github Packages and NPM
