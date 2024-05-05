@@ -65,6 +65,7 @@ Object {
     "brace-style": Object {
       "create": [Function],
       "meta": Object {
+        "deprecated": true,
         "docs": Object {
           "description": "Enforce consistent brace style for blocks",
           "recommended": false,
@@ -79,6 +80,7 @@ Object {
           "sameLineOpen": "Opening curly brace appears on the same line as controlling statement.",
           "singleLineClose": "Closing curly brace should be on the same line as opening curly brace or on the line after the previous block.",
         },
+        "replacedBy": Array [],
         "schema": Array [
           Object {
             "enum": Array [
